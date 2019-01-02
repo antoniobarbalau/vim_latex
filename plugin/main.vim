@@ -9,11 +9,11 @@ nnoremap lc :call CreateLatex()<cr><cr>
 " latex verbose compilation
 nnoremap lcv :call CreateLatex()<cr>
 
-function! OpenLatex()
+function! LatexOpenPdf()
     !xdg-open %:r.pdf &
 endfunction
 " latex open pdf
-nnoremap lop :call LatexOpen()<cr><cr>
+nnoremap lop :call LatexOpenPdf()<cr><cr>
 
 
 " latex checklist
