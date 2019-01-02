@@ -25,5 +25,6 @@ nnoremap lci o\item[$-$]
 " latex mark: jump to the next mark
 nnoremap lm /<--\*\*--><cr>:noh<cr>ca<
 " latex load template: read the default template and insert it
-nnoremap llt :read ./latex_template.tex<cr>ggdd/<--\*\*--><cr>:noh<cr>ca<
+nnoremap llt :read %:p:h/latex_template.tex<cr>ggdd/<--\*\*--><cr>:noh<cr>ca<
+
 
