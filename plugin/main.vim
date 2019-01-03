@@ -3,28 +3,24 @@ function! CreateLatex()
     !pdflatex %
 endfunction
 " latex create
-nnoremap lc :call CreateLatex()<cr><cr>
-
-
+nnoremap <Space>lc :call CreateLatex()<cr><cr>
 " latex verbose compilation
-nnoremap lcv :call CreateLatex()<cr>
-
+nnoremap <Space>lvc :call CreateLatex()<cr>
 function! LatexOpenPdf()
     !xdg-open %:r.pdf &
 endfunction
 " latex open pdf
-nnoremap lop :call LatexOpenPdf()<cr><cr>
+nnoremap <Space>lo :call LatexOpenPdf()<cr><cr>
+" latex load template: read the default template and insert it
+nnoremap <Space>lt :read ~/.config/nvim/bundle/vim_tonio_latex/plugin/latex_template.tex<cr>ggdd/<--\*\*--><cr>:noh<cr>ca<
+" latex mark: jump to the next mark
+autocmd FileType tex noremap <Space><Space> /<--\*\*--><cr>:noh<cr>ca<
 
 
 " latex checklist
-nnoremap lcl i\begin{itemize}<cr>\end{itemize}<cr><esc>
+autocmd FileType tex noremap \cl \begin{itemize}<cr>\end{itemize}<cr><esc>ko
 " latex check item
-nnoremap lci o\item[$-$] 
+autocmd FileType tex noremap \i \item[$-$]<Space>
 
-
-" latex mark: jump to the next mark
-nnoremap lm /<--\*\*--><cr>:noh<cr>ca<
-" latex load template: read the default template and insert it
-nnoremap llt :read ~/.config/nvim/bundle/vim_tonio_latex/plugin/latex_template.tex<cr>ggdd/<--\*\*--><cr>:noh<cr>ca<
 
 
