@@ -18,9 +18,9 @@ autocmd FileType tex noremap <Space><Space> /<--\*\*--><cr>:noh<cr>ca<
 
 
 " latex checklist
-autocmd FileType tex noremap \cl \begin{itemize}<cr>\end{itemize}<cr><esc>ko
+autocmd FileType tex inoremap \cl \begin{itemize}<cr>\end{itemize}<cr><esc>ko
 " latex check item
-autocmd FileType tex noremap \i \item[$-$]<Space>
+autocmd FileType tex inoremap \i \item[$-$]<Space>
 
 
 
