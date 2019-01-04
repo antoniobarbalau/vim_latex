@@ -22,11 +22,11 @@ function! SectionCreate()
     w
     !python ~/.config/nvim/bundle/vim_tonio_latex/plugin/create_standalone_section.py %
 endfunction
-nnoremap <Space>sc :call SectionCreate()<cr><cr>
+nnoremap <Space>sc :call SectionCreate()<cr>
 function! SectionOpen()
     !python ~/.config/nvim/bundle/vim_tonio_latex/plugin/open_standalone_section.py %
 endfunction
-nnoremap <Space>so :call SectionCreate()<cr><cr>
+nnoremap <Space>so :call SectionOpen()<cr>
 
 
 
