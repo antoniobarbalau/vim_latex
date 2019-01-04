@@ -3,18 +3,24 @@ function! CreateLatex()
     !pdflatex %
 endfunction
 " latex create
-nnoremap <Space>lc :call CreateLatex()<cr><cr>
+autocmd FileType tex nnoremap <Space>c :call CreateLatex()<cr><cr>
 " latex verbose compilation
-nnoremap <Space>lvc :call CreateLatex()<cr>
+autocmd FileType tex nnoremap <Space>vc :call CreateLatex()<cr>
 function! LatexOpenPdf()
     !xdg-open %:r.pdf &
 endfunction
 " latex open pdf
-nnoremap <Space>lo :call LatexOpenPdf()<cr><cr>
+autocmd FileType tex nnoremap <Space>o :call LatexOpenPdf()<cr><cr>
 " latex load template: read the default template and insert it
-nnoremap <Space>lt :read ~/.config/nvim/bundle/vim_tonio_latex/plugin/latex_template.tex<cr>ggdd/<--\*\*--><cr>:noh<cr>ca<
+autocmd FileType tex nnoremap <Space>lt :read ~/.config/nvim/bundle/vim_tonio_latex/plugin/latex_template.tex<cr>ggdd/<--\*\*--><cr>:noh<cr>ca<
 " latex mark: jump to the next mark
 autocmd FileType tex noremap <Space><Space> /<--\*\*--><cr>:noh<cr>ca<
+
+
+
+function! SectionCreate()
+    w
+    !python ~/.config/nvim/bundle/vim_tonio_latex/plugin/create_standalone_section.py %
 
 
 " latex checklist
