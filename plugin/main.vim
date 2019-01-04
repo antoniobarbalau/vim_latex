@@ -21,6 +21,7 @@ autocmd FileType tex noremap <Space><Space> /<--\*\*--><cr>:noh<cr>ca<
 function! SectionCreate()
     w
     !python ~/.config/nvim/bundle/vim_tonio_latex/plugin/create_standalone_section.py %
+endfunction
 
 
 " latex checklist
