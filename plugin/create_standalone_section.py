@@ -4,7 +4,7 @@ import subprocess
 
 
 section_text = open(sys.argv[1], 'r').read()
-template_text = open('~/.config/nvim/latex_template.tex', 'r').readlines()
+template_text = open('~/.config/nvim/bundle/vim_tonio_/latex_template.tex', 'r').readlines()
 # template_text = open('./latex_template.tex', 'r').readlines()
 
 output_text = ''

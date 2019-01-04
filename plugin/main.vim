@@ -22,7 +22,7 @@ function! SectionCreate()
     w
     !python ~/.config/nvim/bundle/vim_tonio_latex/plugin/create_standalone_section.py %
 endfunction
-autocmd FileType tex nnoremap <Space>sc :call SectionCreate()<cr><cr>
+noremap <Space>sc :call SectionCreate()<cr><cr>
 
 
 " latex checklist
