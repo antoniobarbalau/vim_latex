@@ -24,7 +24,7 @@ function! SectionCreate()
 endfunction
 nnoremap <Space>sc :call SectionCreate()<cr>
 function! SectionOpen()
-    !python ~/.config/nvim/bundle/vim_tonio_latex/plugin/open_standalone_section.py %:p
+    !python ~/.config/nvim/bundle/vim_tonio_latex/plugin/open_standalone_section.py %:p | xdf-open &
 endfunction
 nnoremap <Space>so :call SectionOpen()<cr>
 
