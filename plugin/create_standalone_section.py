@@ -31,7 +31,7 @@ print(filename)
 
 with open(filename, 'w') as f:
     f.write(output_text)
-# subprocess.call(['pdflatex', filename])
+subprocess.call(['pdflatex', filename, '-output-directory', os.path.dirname(sys.argv[1])])
 # subprocess.call(['zathura', filename.replace('tex', 'pdf')])
 
 
