@@ -20,11 +20,11 @@ nnoremap <Space><Space> /<--\*\*--><cr>:noh<cr>ca<
 
 function! SectionCreate()
     w
-    !python ~/.config/nvim/bundle/vim_tonio_latex/plugin/create_standalone_section.py %
+    !python ~/.config/nvim/bundle/vim_tonio_latex/plugin/create_standalone_section.py %:p
 endfunction
 nnoremap <Space>sc :call SectionCreate()<cr>
 function! SectionOpen()
-    !python ~/.config/nvim/bundle/vim_tonio_latex/plugin/open_standalone_section.py %
+    !python ~/.config/nvim/bundle/vim_tonio_latex/plugin/open_standalone_section.py %:p
 endfunction
 nnoremap <Space>so :call SectionOpen()<cr>
 
