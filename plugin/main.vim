@@ -31,9 +31,9 @@ nnoremap <Space>so :call SectionOpen()<cr><cr>
 
 
 " latex checklist
-autocmd FileType tex inoremap \cl \begin{itemize}<cr>\end{itemize}<Esc>ko
+" autocmd FileType tex inoremap \cl \begin{itemize}<cr>\end{itemize}<Esc>ko
 " latex check item
-autocmd FileType tex inoremap \i \item[$-$]<Space>
+" autocmd FileType tex inoremap \i \item[$-$]<Space>
 
 
 
