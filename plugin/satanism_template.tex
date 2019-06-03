@@ -1,0 +1,57 @@
+\documentclass[17pt]{extbook}
+\usepackage{wallpaper}
+
+
+\usepackage{emerald}
+\usepackage[T1]{fontenc}
+\renewcommand{\chaptername}{Capitolul}
+\renewcommand{\partname}{Partea}
+\renewcommand\thesection{\arabic{section}}
+\usepackage[none]{hyphenat}
+
+ 
+\usepackage{rotating}
+\usepackage[first=-3,last=3]{lcg}
+\makeatletter
+\newcommand{\globalrand}{\rand\global\cr@nd\cr@nd}
+\makeatother
+\newcommand{\randomrotation}[1]{\globalrand\turnbox{\value{rand}}{#1}\phantom{#1}}
+\makeatletter
+\def\cthulhu#1{%
+    \@cthulhu#1 \@empty
+}
+\def\@cthulhu#1 #2{%
+   \randomrotation{#1}\space
+   \ifx #2\@empty\else
+    \expandafter\@cthulhu
+   \fi
+   #2%
+}
+\makeatother
+\renewcommand*{\rmdefault}{fts}
+\newcommand{\eldersign}{\raisebox{-3\height}{
+    \includegraphics[height=5ex]{./assets/e_2.png}}
+}
+% \newcommand{\eldersign}{\makebox{
+%     \includegraphics[height=5ex]{./assets/e_2.png}}
+% }
+
+
+
+\begin{document}
+\pagestyle{empty}\CenterWallPaper{}{./assets/parchemin_6.jpg}
+
+
+<--**-->
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
